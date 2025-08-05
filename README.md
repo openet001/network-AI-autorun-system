@@ -264,6 +264,7 @@ npm run dev
  
 确保后端允许 CORS
 确保后端 FastAPI 添加了如下内容（否则前端无法请求后端）：
+```
 Python 
 from fastapi.middleware.cors import
  CORSMiddleware
@@ -282,11 +283,15 @@ True
 "*"
 ],
 )
+```
  
 8. (可选) 打包发布
+```
 bash 
  
 npm run build
+
+```
 # 构建后的静态文件在 dist/ 目录
 
 
