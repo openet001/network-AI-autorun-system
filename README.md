@@ -235,7 +235,9 @@ sudo rm -rf ~/.npm ~/.nvm ~/.node-gyp
 bash
 node -v
 npm -v
-# 都应提示 not found
+
+都应提示"not found"
+
 3. 重新添加 NodeSource 源并安装 Node.js 20.x
 bash
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
