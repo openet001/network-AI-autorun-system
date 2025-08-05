@@ -219,8 +219,8 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 
-# 前端部署：
-
+## 前端部署：
+```
 办法（适用于 Ubuntu 22.04 LTS）
  卸载所有旧的 node/nodejs/nodesource 相关包
 bash
@@ -256,6 +256,7 @@ npm install antd axios react-router-dom
 npm run dev
 
 （ or npm run dev -- --host 0.0.0.0  # allow  lan access url )
+```
 
 要点：libnode-dev（12.x）与新 nodejs 包有冲突，不清理干净安装不了新版。
 解决方案：彻底卸载旧 node 相关包和残留文件，然后再装新版。
