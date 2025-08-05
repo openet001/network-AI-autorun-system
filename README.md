@@ -219,7 +219,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 
-前端部署：
+# 前端部署：
 
 办法（适用于 Ubuntu 22.04 LTS）
 1. 卸载所有旧的 node/nodejs/nodesource 相关包
