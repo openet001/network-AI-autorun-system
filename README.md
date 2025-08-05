@@ -222,7 +222,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 # 前端部署：
 
 办法（适用于 Ubuntu 22.04 LTS）
-1. 卸载所有旧的 node/nodejs/nodesource 相关包
+ 卸载所有旧的 node/nodejs/nodesource 相关包
 bash
 sudo apt-get remove --purge nodejs npm libnode-dev -y
 sudo apt-get autoremove -y
@@ -231,31 +231,30 @@ sudo rm -rf /usr/include/node
 sudo rm -rf /usr/bin/node /usr/bin/npm
 sudo rm -rf /usr/local/bin/node /usr/local/bin/npm
 sudo rm -rf ~/.npm ~/.nvm ~/.node-gyp
-2. 确认 node/npm 已被卸载
+ 确认 node/npm 已被卸载
 bash
 node -v
 npm -v
-
-都应提示"not found"
-
-3. 重新添加 NodeSource 源并安装 Node.js 20.x
+都应提示 not found
+ 重新添加 NodeSource 源并安装 Node.js 20.x
 bash
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
-4. 检查 node/npm 版本
+ 检查 node/npm 版本
 bash
 node -v    # 应输出 v20.x.x
 npm -v     # 应输出 10.x.x 或更高
-5. （可选）升级 npm 到最新版
+（可选）升级 npm 到最新版
 bash
 sudo npm install -g npm@latest
-6. 创建 Vite+React 项目
+创建 Vite+React 项目
 bash
 npm create vite@latest network-ai-frontend -- --template react
 cd network-ai-frontend
 npm install
 npm install antd axios react-router-dom
 npm run dev
+
 （ or npm run dev -- --host 0.0.0.0  # allow  lan access url )
 
 要点：libnode-dev（12.x）与新 nodejs 包有冲突，不清理干净安装不了新版。
