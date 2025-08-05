@@ -256,6 +256,8 @@ cd network-ai-frontend
 npm install
 npm install antd axios react-router-dom
 npm run dev
+（ or npm run dev -- --host 0.0.0.0  # allow  lan access url )
+
 要点：libnode-dev（12.x）与新 nodejs 包有冲突，不清理干净安装不了新版。
 解决方案：彻底卸载旧 node 相关包和残留文件，然后再装新版。
 终端会输出本地访问地址，通常是 http://localhost:5173
